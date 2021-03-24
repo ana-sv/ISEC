@@ -1,0 +1,17 @@
+Atletas: 3
+Km 1
+1. Pedro Mendes: 45
+2. Ana Alves: 46
+3. Zulmira Pires: 57
+Km 2
+1. Ana Alves: 90
+2. Pedro Mendes: 101
+3. Zulmira Pires: 103
+Km 3
+1. Ana Alves: 150
+2. Pedro Mendes: 151
+3. Zulmira Pires: 158
+Km 10
+1. Pedro Mendes: 489
+2. Zulmira Pires: 510
+3. Ana Alves: 570
