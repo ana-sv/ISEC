@@ -1,0 +1,47 @@
+# depslib dependency file v1.0
+1577904717 source:d:\eng_informática\introdução á inteligência artificial\trabalhospraticos\trabalhopratico2_minimumbandwitdthproblem_anavideira\tp2\avalia.c
+	"avalia.h"
+
+1577902088 d:\eng_informática\introdução á inteligência artificial\trabalhospraticos\trabalhopratico2_minimumbandwitdthproblem_anavideira\tp2\avalia.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1578003542 source:d:\eng_informática\introdução á inteligência artificial\trabalhospraticos\trabalhopratico2_minimumbandwitdthproblem_anavideira\tp2\main.c
+	"utils.h"
+	"localSearch.h"
+
+1578076667 d:\eng_informática\introdução á inteligência artificial\trabalhospraticos\trabalhopratico2_minimumbandwitdthproblem_anavideira\tp2\utils.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	<math.h>
+
+1577987331 source:d:\eng_informática\introdução á inteligência artificial\trabalhospraticos\trabalhopratico2_minimumbandwitdthproblem_anavideira\tp2\trepacolinas.c
+	"trepaColinas.h"
+
+1577988149 d:\eng_informática\introdução á inteligência artificial\trabalhospraticos\trabalhopratico2_minimumbandwitdthproblem_anavideira\tp2\trepacolinas.h
+
+1578003642 source:d:\eng_informática\introdução á inteligência artificial\trabalhospraticos\trabalhopratico2_minimumbandwitdthproblem_anavideira\tp2\utils.c
+	"utils.h"
+
+1578008390 source:d:\eng_informática\introdução á inteligência artificial\trabalhospraticos\trabalhopratico2_minimumbandwitdthproblem_anavideira\tp2\localsearch.c
+	"localSearch.h"
+
+1578003452 d:\eng_informática\introdução á inteligência artificial\trabalhospraticos\trabalhopratico2_minimumbandwitdthproblem_anavideira\tp2\localsearch.h
+	"evaluate.h"
+	"utils.h"
+
+1577988274 source:d:\eng_informática\introdução á inteligência artificial\trabalhospraticos\trabalhopratico2_minimumbandwitdthproblem_anavideira\tp2\pesquisalocal.c
+
+1577902088 d:\eng_informática\introdução á inteligência artificial\trabalhospraticos\trabalhopratico2_minimumbandwitdthproblem_anavideira\tp2\evaluate.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1577988555 source:d:\eng_informática\introdução á inteligência artificial\trabalhospraticos\trabalhopratico2_minimumbandwitdthproblem_anavideira\tp2\evaluate.c
+	"evaluate.h"
+
+1577998667 source:d:\eng_informática\introdução á inteligência artificial\trabalhospraticos\trabalhopratico2_minimumbandwitdthproblem_anavideira\tp2\evolutionary.c
+
