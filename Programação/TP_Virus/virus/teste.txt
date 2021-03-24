@@ -1,0 +1,22 @@
+
+SIMULACAO
+--> Sala ID:6  Capacidade:10
+--> Sala ID:6  Capacidade:10
+--> Sala ID:6  Capacidade:10
+--> Sala ID:6  Capacidade:10
+--> Sala ID:6  Capacidade:10
+--> Sala ID:6  Capacidade:10
+>PauloPires1[23] _________ S
+>AnaLebre34A[55] _________ I
+>Tomas111[12] _________ S
+>PauloPires2[67] _________ D(10)
+>LuisaSantos[40] _________ D(3)
+>Zulmira2A[17] _________ S
+
+------- Estatisticas Gerais-------
+Numero total de Pessoas: 6
+Taxa de Mortalidade: 0.000000 
+Taxa de Recuperacao: 0.000000 
+Taxa de Recuperacao: 0.166667 
+Taxa de Infetados: 0.333333 
+Media de dias doente: 2.166667 dias
