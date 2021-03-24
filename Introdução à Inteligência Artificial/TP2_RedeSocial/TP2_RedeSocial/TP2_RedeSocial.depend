@@ -1,0 +1,61 @@
+# depslib dependency file v1.0
+1546198286 source:c:\users\ana rita\desktop\tp2_redesocial\funcao.c
+	"funcao.h"
+
+1546196496 c:\users\ana rita\desktop\tp2_redesocial\funcao.h
+
+1546196485 source:c:\users\ana rita\desktop\tp2_redesocial\utils.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"utils.h"
+
+1546194766 c:\users\ana rita\desktop\tp2_redesocial\utils.h
+
+1546198947 source:c:\users\ana rita\desktop\tp2_redesocial\algoritmo.c
+	<stdio.h>
+	<stdlib.h>
+	"algoritmo.h"
+	"funcao.h"
+	"utils.h"
+
+1546200318 c:\users\ana rita\desktop\tp2_redesocial\algoritmo.h
+
+1546199265 source:c:\users\ana rita\desktop\tp2_redesocial\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utils.h"
+	"algoritmo.h"
+
+1546198948 source:d:\eng_informática\introdução á inteligência artificial\trabalhospraticos\trabpratico2_redesocial_anavideira\tp2_anavideira_a21250074\tp2_anavideira_a21250074\tp2_redesocial\algoritmo.c
+	<stdio.h>
+	<stdlib.h>
+	"algoritmo.h"
+	"funcao.h"
+	"utils.h"
+
+1546200320 d:\eng_informática\introdução á inteligência artificial\trabalhospraticos\trabpratico2_redesocial_anavideira\tp2_anavideira_a21250074\tp2_anavideira_a21250074\tp2_redesocial\algoritmo.h
+
+1546196498 d:\eng_informática\introdução á inteligência artificial\trabalhospraticos\trabpratico2_redesocial_anavideira\tp2_anavideira_a21250074\tp2_anavideira_a21250074\tp2_redesocial\funcao.h
+
+1546194768 d:\eng_informática\introdução á inteligência artificial\trabalhospraticos\trabpratico2_redesocial_anavideira\tp2_anavideira_a21250074\tp2_anavideira_a21250074\tp2_redesocial\utils.h
+
+1546198288 source:d:\eng_informática\introdução á inteligência artificial\trabalhospraticos\trabpratico2_redesocial_anavideira\tp2_anavideira_a21250074\tp2_anavideira_a21250074\tp2_redesocial\funcao.c
+	"funcao.h"
+
+1546199266 source:d:\eng_informática\introdução á inteligência artificial\trabalhospraticos\trabpratico2_redesocial_anavideira\tp2_anavideira_a21250074\tp2_anavideira_a21250074\tp2_redesocial\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utils.h"
+	"algoritmo.h"
+
+1546196486 source:d:\eng_informática\introdução á inteligência artificial\trabalhospraticos\trabpratico2_redesocial_anavideira\tp2_anavideira_a21250074\tp2_anavideira_a21250074\tp2_redesocial\utils.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"utils.h"
+
