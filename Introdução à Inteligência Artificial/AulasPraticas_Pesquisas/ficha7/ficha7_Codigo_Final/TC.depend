@@ -1,0 +1,91 @@
+# depslib dependency file v1.0
+1479671204 source:d:\eng_informática\introdução á inteligência artificial\trabpratico2_redesocial\iia_ficha7_codigo_final\algoritmo.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"algoritmo.h"
+	"funcao.h"
+	"utils.h"
+
+1479410501 d:\eng_informática\introdução á inteligência artificial\trabpratico2_redesocial\iia_ficha7_codigo_final\algoritmo.h
+
+1478082402 d:\eng_informática\introdução á inteligência artificial\trabpratico2_redesocial\iia_ficha7_codigo_final\funcao.h
+
+1478082615 d:\eng_informática\introdução á inteligência artificial\trabpratico2_redesocial\iia_ficha7_codigo_final\utils.h
+
+1478801605 source:d:\eng_informática\introdução á inteligência artificial\trabpratico2_redesocial\iia_ficha7_codigo_final\funcao.c
+	"funcao.h"
+
+1479734467 source:d:\eng_informática\introdução á inteligência artificial\trabpratico2_redesocial\iia_ficha7_codigo_final\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"algoritmo.h"
+	"utils.h"
+
+1478802182 source:d:\eng_informática\introdução á inteligência artificial\trabpratico2_redesocial\iia_ficha7_codigo_final\utils.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"utils.h"
+
+1479671204 source:d:\eng_informática\introdução á inteligência artificial\aulaspraticas_fichasresolvidas\ficha 7 - pesquisa local\iia_ficha7_codigo_final\algoritmo.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"algoritmo.h"
+	"funcao.h"
+	"utils.h"
+
+1479410501 d:\eng_informática\introdução á inteligência artificial\aulaspraticas_fichasresolvidas\ficha 7 - pesquisa local\iia_ficha7_codigo_final\algoritmo.h
+
+1478082402 d:\eng_informática\introdução á inteligência artificial\aulaspraticas_fichasresolvidas\ficha 7 - pesquisa local\iia_ficha7_codigo_final\funcao.h
+
+1478082615 d:\eng_informática\introdução á inteligência artificial\aulaspraticas_fichasresolvidas\ficha 7 - pesquisa local\iia_ficha7_codigo_final\utils.h
+
+1478801605 source:d:\eng_informática\introdução á inteligência artificial\aulaspraticas_fichasresolvidas\ficha 7 - pesquisa local\iia_ficha7_codigo_final\funcao.c
+	"funcao.h"
+
+1479734467 source:d:\eng_informática\introdução á inteligência artificial\aulaspraticas_fichasresolvidas\ficha 7 - pesquisa local\iia_ficha7_codigo_final\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"algoritmo.h"
+	"utils.h"
+
+1478802182 source:d:\eng_informática\introdução á inteligência artificial\aulaspraticas_fichasresolvidas\ficha 7 - pesquisa local\iia_ficha7_codigo_final\utils.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"utils.h"
+
+1479671204 source:d:\eng_informática\introdução á inteligência artificial\aulaspraticas_pesquisas\ficha7\ficha7_codigo_final\algoritmo.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"algoritmo.h"
+	"funcao.h"
+	"utils.h"
+
+1479410501 d:\eng_informática\introdução á inteligência artificial\aulaspraticas_pesquisas\ficha7\ficha7_codigo_final\algoritmo.h
+
+1478082402 d:\eng_informática\introdução á inteligência artificial\aulaspraticas_pesquisas\ficha7\ficha7_codigo_final\funcao.h
+
+1478082615 d:\eng_informática\introdução á inteligência artificial\aulaspraticas_pesquisas\ficha7\ficha7_codigo_final\utils.h
+
+1478801605 source:d:\eng_informática\introdução á inteligência artificial\aulaspraticas_pesquisas\ficha7\ficha7_codigo_final\funcao.c
+	"funcao.h"
+
+1478802182 source:d:\eng_informática\introdução á inteligência artificial\aulaspraticas_pesquisas\ficha7\ficha7_codigo_final\utils.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"utils.h"
+
+1574158645 source:d:\eng_informática\introdução á inteligência artificial\aulaspraticas_pesquisas\ficha7\ficha7_codigo_final\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"algoritmo.h"
+	"utils.h"
+

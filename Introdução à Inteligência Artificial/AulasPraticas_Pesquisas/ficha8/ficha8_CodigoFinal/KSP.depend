@@ -1,0 +1,63 @@
+# depslib dependency file v1.0
+1513250096 source:c:\users\ana rita\desktop\ficha 8\algoritmo.c
+	<stdio.h>
+	<stdlib.h>
+	"algoritmo.h"
+	"utils.h"
+
+1480876036 c:\users\ana rita\desktop\ficha 8\algoritmo.h
+
+1480871591 c:\users\ana rita\desktop\ficha 8\utils.h
+
+1513252826 source:c:\users\ana rita\desktop\ficha 8\funcao.c
+	"algoritmo.h"
+	"funcao.h"
+
+1480871601 c:\users\ana rita\desktop\ficha 8\funcao.h
+
+1480882340 source:c:\users\ana rita\desktop\ficha 8\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"algoritmo.h"
+	"funcao.h"
+	"utils.h"
+
+1480887532 source:c:\users\ana rita\desktop\ficha 8\utils.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"algoritmo.h"
+	"utils.h"
+
+1513250096 source:d:\eng_informática\introdução á inteligência artificial\ficha 8\algoritmo.c
+	<stdio.h>
+	<stdlib.h>
+	"algoritmo.h"
+	"utils.h"
+
+1480876036 d:\eng_informática\introdução á inteligência artificial\ficha 8\algoritmo.h
+
+1480871591 d:\eng_informática\introdução á inteligência artificial\ficha 8\utils.h
+
+1480882340 source:d:\eng_informática\introdução á inteligência artificial\ficha 8\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"algoritmo.h"
+	"funcao.h"
+	"utils.h"
+
+1480871601 d:\eng_informática\introdução á inteligência artificial\ficha 8\funcao.h
+
+1480887532 source:d:\eng_informática\introdução á inteligência artificial\ficha 8\utils.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"algoritmo.h"
+	"utils.h"
+
+1513856657 source:d:\eng_informática\introdução á inteligência artificial\ficha 8\funcao.c
+	"algoritmo.h"
+	"funcao.h"
+
