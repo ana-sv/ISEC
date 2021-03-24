@@ -1,0 +1,4 @@
+Manuel Silva, 23, 34, 12, 0
+Olga Pereira, 7, 23 , 0 
+Maria Santos, 4, 6, 9, 0
+Jorge Silva 2, 8, 4, 1, 0
