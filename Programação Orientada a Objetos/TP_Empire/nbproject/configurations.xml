@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>Abandonado.h</itemPath>
+      <itemPath>Alianca.h</itemPath>
+      <itemPath>BancoCentral.h</itemPath>
+      <itemPath>BolsaValores.h</itemPath>
+      <itemPath>Castelo.h</itemPath>
+      <itemPath>Continente.h</itemPath>
+      <itemPath>DefesasTerritoriais.h</itemPath>
+      <itemPath>DronesMilitares.h</itemPath>
+      <itemPath>Duna.h</itemPath>
+      <itemPath>Evento.h</itemPath>
+      <itemPath>Fortaleza.h</itemPath>
+      <itemPath>Ilha.h</itemPath>
+      <itemPath>Imperio.h</itemPath>
+      <itemPath>Inicial.h</itemPath>
+      <itemPath>Invasao.h</itemPath>
+      <itemPath>Jogo.h</itemPath>
+      <itemPath>Mina.h</itemPath>
+      <itemPath>MisseisTeleguiados.h</itemPath>
+      <itemPath>Montanha.h</itemPath>
+      <itemPath>Mundo.h</itemPath>
+      <itemPath>Pescaria.h</itemPath>
+      <itemPath>Planicie.h</itemPath>
+      <itemPath>Refugio.h</itemPath>
+      <itemPath>Snapshot.h</itemPath>
+      <itemPath>Tecnologia.h</itemPath>
+      <itemPath>Territorio.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>Abandonado.cpp</itemPath>
+      <itemPath>Alianca.cpp</itemPath>
+      <itemPath>BancoCentral.cpp</itemPath>
+      <itemPath>BolsaValores.cpp</itemPath>
+      <itemPath>Castelo.cpp</itemPath>
+      <itemPath>Continente.cpp</itemPath>
+      <itemPath>DefesasTerritoriais.cpp</itemPath>
+      <itemPath>DronesMilitares.cpp</itemPath>
+      <itemPath>Duna.cpp</itemPath>
+      <itemPath>Evento.cpp</itemPath>
+      <itemPath>Fortaleza.cpp</itemPath>
+      <itemPath>Ilha.cpp</itemPath>
+      <itemPath>Imperio.cpp</itemPath>
+      <itemPath>Inicial.cpp</itemPath>
+      <itemPath>Invasao.cpp</itemPath>
+      <itemPath>Jogo.cpp</itemPath>
+      <itemPath>Mina.cpp</itemPath>
+      <itemPath>MisseisTeleguiados.cpp</itemPath>
+      <itemPath>Montanha.cpp</itemPath>
+      <itemPath>Mundo.cpp</itemPath>
+      <itemPath>Pescaria.cpp</itemPath>
+      <itemPath>Planicie.cpp</itemPath>
+      <itemPath>Refugio.cpp</itemPath>
+      <itemPath>Snapshot.cpp</itemPath>
+      <itemPath>Tecnologia.cpp</itemPath>
+      <itemPath>Territorio.cpp</itemPath>
+      <itemPath>main.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+    <itemPath>empire.txt</itemPath>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+      </compileType>
+      <item path="Abandonado.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Abandonado.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Alianca.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Alianca.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="BancoCentral.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BancoCentral.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="BolsaValores.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BolsaValores.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Castelo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Castelo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Continente.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Continente.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DefesasTerritoriais.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DefesasTerritoriais.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DronesMilitares.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DronesMilitares.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Duna.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Duna.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Evento.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Evento.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Fortaleza.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Fortaleza.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Ilha.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Ilha.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Imperio.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Imperio.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Inicial.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Inicial.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Invasao.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Invasao.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Jogo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Jogo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Mina.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Mina.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MisseisTeleguiados.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MisseisTeleguiados.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Montanha.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Montanha.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Mundo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Mundo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Pescaria.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Pescaria.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Planicie.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Planicie.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Refugio.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Refugio.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Snapshot.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Snapshot.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Tecnologia.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Tecnologia.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Territorio.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Territorio.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="empire.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="Abandonado.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Abandonado.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Alianca.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Alianca.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="BancoCentral.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BancoCentral.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="BolsaValores.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BolsaValores.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Castelo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Castelo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Continente.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Continente.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DefesasTerritoriais.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DefesasTerritoriais.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DronesMilitares.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DronesMilitares.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Duna.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Duna.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Evento.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Evento.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Fortaleza.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Fortaleza.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Ilha.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Ilha.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Imperio.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Imperio.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Inicial.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Inicial.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Invasao.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Invasao.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Jogo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Jogo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Mina.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Mina.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MisseisTeleguiados.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MisseisTeleguiados.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Montanha.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Montanha.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Mundo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Mundo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Pescaria.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Pescaria.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Planicie.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Planicie.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Refugio.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Refugio.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Snapshot.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Snapshot.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Tecnologia.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Tecnologia.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Territorio.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Territorio.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="empire.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
