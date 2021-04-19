@@ -1,0 +1,42 @@
+
+
+
+Rever uso de protected , polimorfismo, funcoes virtuais, classes abstratas 
+
+
+
+virtual int obtemPreco() const = 0;
+ou 
+virtual int obtemPreco() const { return 0;};
+
+
+POLIMORFISMO**********************************************************************
+    
+    Imovel *p; 
+    p=new Loja (... )
+            p->ObtemPreco  
+               
+isto so funciona direito se tiver o Virtual atrás da função ObtemPreco
+
+
+
+VIRTUAL***********************************************************************
+
+virtual usamos quando uma função vai provavelmente ser reescrita ??? 
+
+Imovel *p;
+p=new Apartamento(); 
+p->getArea();   como a funcao getArea é nao virtual, esta será sempre usada a funcao da base imovel e nao a do apartamento
+                se fosse virtual, chamava a versao mais recente, a funcao da classe-filha apartamento que é a que queremos realmente
+                Nao tem a ver com permisoes mas com qual vamos chamar 
+
+
+--> e isto é uma situação de polimorfismo ! 
+
+--> o polimorfismo só funciona de forma direta: por ponteiro ou por referencia 
+Imovel * p ; 
+Imovel x;
+
+
+
+CLASSE ABSTRACTA**********************************************************************
