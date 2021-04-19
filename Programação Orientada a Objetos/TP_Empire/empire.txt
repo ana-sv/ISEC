@@ -1,0 +1,8 @@
+planicie 1
+montanha 1
+fortaleza 1
+mina 1
+duna 1
+castelo 1
+refugio 1
+pescaria 1
