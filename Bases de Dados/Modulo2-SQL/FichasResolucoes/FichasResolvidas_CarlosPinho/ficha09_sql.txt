@@ -1,0 +1,124 @@
+1.a)
+
+create sequence exp_sequencia; -- Cria a sequência
+
+select exp_sequencia.currval from dual; -- Dá erro devido à sequência estar vazia e estarmos a seleccionar o número corrente, pois foi criada na instrução anterior
+
+select exp_sequencia.nextval from dual; -- Apresenta o nro 1
+select exp_sequencia.nextval from dual; -- Incrementa e apresenta o nro 2
+select exp_sequencia.nextval from dual; -- Incrementa e apresenta o nro 3
+select exp_sequencia.currval from dual; -- Incrementa e apresenta o nro 4
+drop sequence exp_sequencia; -- Apaga a sequência
+
+2.
+
+create table editoras_backup as select * from editoras;
+
+alter table editoras_backup
+add constraint editoras_backup_pk primary key(codigo_editora);
+
+3.
+
+create sequence seq_editback
+start with 4 increment by 1 nomaxvalue nocycle;
+
+4.
+
+insert into editoras_backup values
+(seq_editback.nextval,'D.Quixote',901111111,'Rua Cidade de Córdova, n.2 2610-038 Alfragide','707252252','707252253');
+
+insert into editoras_backup values
+(seq_editback.nextval,'Almedina',901212121,'Rua Fernandes Tomás,n.º 76 a 80, 3000-167 Coimbra','239851903',239851904');
+
+5.
+
+select seq_editback.currval from dual;
+select seq_editback.nextval from dual;
+select seq_editback.currval from dual;
+
+6.
+
+drop sequence seq_editback;
+
+7.
+
+create view livros_informatica as select *
+from livros
+where genero='Informática';
+
+8.
+
+insert into livros_informatica(codigo_livro,titulo,isbn,genero)
+values(30,'Uma noite de Verão',8000000001,'Informática');
+
+insert into livros_informatica(codigo_livro,titulo,isbn,genero)
+values(31,'O céu é azul',8000000002,'Romance');
+
+insert into livros(codigo_livro,codigo_editora,codigo_autor,titulo,isbn,genero)
+values(32,2,2,'Longe de tudo',8000000003,'Informática');
+
+-- Qualquer um dos códigos insere um registo na tabela livros
+-- Os 2 primeiros códigos inserem os registos através da vista livros_informatica
+-- O 3ro código insere o registo directamente na tabela livros
+-- Apenas a 1ra e 3ra inserção têm reflexo na vista, pois os livros introduzidos são de informática
+
+9.
+
+delete from livros
+where codigo_livro in(30,31,32);
+
+10.
+
+drop view livros_informatica;
+
+11.
+
+create table livros_backup as select * from livros;
+
+12.
+
+create view autor_livro as
+select upper(nome) nome,upper(titulo) titulo
+from autores,livros_backup
+where autores.codigo_autor=livros_backup.codigo_autor;
+
+13.
+
+select * from autor_livro;
+
+delete livros_backup;
+
+-- Não devolve resultados, pois todos os registos da tabela livros_backup foram apagados
+-- Como a vista usa os registos da tabela livros_backup e esta está vazia, não são apresentados resultados
+
+14.
+
+drop table livros_backup;
+
+select * from autor_livro;
+
+-- Dá erro de Oracle, pois a vista usa a tabela livros_backup que já não existe
+
+15.
+
+create view livros_vendido as
+select l.codigo_livro,l.titulo,a.nome,v.quantidade
+from autores a,livros l,
+(select codigo_livro,sum(quantidade) quantidade
+ from vendas
+ group by codigo_livro) v
+where a.codigo_autor=l.codigo_autor
+and l.codigo_livro=v.codigo_livro
+order by v.quantidade desc;
+
+16.
+
+select table_name from user_tables;
+
+17.
+
+select c.table_name,c.constraint_name
+from user_constraints c,user_tables t
+where c.table_name=t.table_name;
+
+select * from user_tables;

@@ -1,0 +1,141 @@
+1.
+
+create table autores2
+(codigo_autor number(4) constraint pk_a2 primary key,
+ nome varchar2(30) constraint a2_nome check(nome=upper(nome)),
+ n_contribuinte number(9) unique,
+ morada varchar2(50),
+ idade number(4) constraint idade_ck check(idade>0 and idade<200),
+ sexo char(1),
+ nacionalidade varchar2(20),
+ genero_preferido varchar2(20));
+
+2.
+
+create table avaliacoes
+(codigo_livro number(4),
+ codigo_cliente number(4),
+ nota number(1) constraint nota_ck check(nota between 1 and 5),
+ constraint fk_av_l foreign key(codigo_livro) references livros(codigo_livro),
+ constraint fk_av_c foreign key(codigo_cliente) references clientes(codigo_cliente),
+ primary key(codigo_livro,codigo_cliente));
+
+3.
+
+create table livros_backup as
+select codigo_livro,codigo_editora,codigo_autor,titulo,isbn,upper(genero) as genero,preco_tabela,paginas,quant_em_stock,unidades_vendidas,data_edicao
+from livros;
+
+4.
+
+alter table livros_backup
+add constraint pk_lb primary key(codigo_livro)
+add constraint fk_lb_e foreign key(codigo_editora) references editoras(codigo_editora)
+add constraint fk_lb_a foreign key(codigo_autor) references autores(codigo_autor);
+
+5.
+
+insert into livros_backup values
+(51,
+ (select codigo_editora from editoras where nome like 'FCA%'),
+ (select codigo_autor from autores where nome like 'Sergio Sousa'),
+ 'Informática para todos',132434,'Informática',24,430,null,0,sysdate);
+
+6.
+
+insert into autores2(codigo_autor,nome,n_contribuinte) values
+(45,upper('José Magalhães'),77665544);
+
+7.
+
+delete from livros_backup where codigo_livro=51;
+
+8.
+
+update livros_backup
+set preco_tabela=preco_tabela*0.10
+where genero='AVENTURA';
+
+9.
+
+delete from livros_backup
+where genero='INFORMÁTICA'
+and preco_tabela<(select avg(preco_tabela)
+		  from livros_backup
+		  where genero='INFORMÁTICA');
+
+10.
+
+create table autores_backup as select * from autores;
+
+11.
+
+alter table autores_backup
+add nlivros number(3) default 0 not null check(nlivros between 0 and 150);
+
+12.
+
+update autores_backup a
+set nlivros=(select count(l.codigo_livro)
+             from livros l
+             where l.codigo_autor=a.codigo_autor);
+
+13.
+
+update autores_backup a
+set genero_preferido=(select max(l.genero)
+		      from livros l
+		      where a.codigo_autor=l.codigo_autor
+		      group by l.codigo_autor)
+where exists(select distinct(l.codigo_autor)
+	     from livros l
+	     where a.codigo_autor=l.codigo_autor);
+
+14.
+
+create table editoras_backup as select * from editoras;
+
+15.
+
+drop table editoras_backup;
+
+a)
+
+alter table livros_backup
+add edicao number(7);
+
+b)
+
+update livros_backup l
+set l.unidades_vendidas=(select sum(v.quantidade)
+			 from vendas v
+			 where l.codigo_livro=v.codigo_livro
+			 group by v.codigo_livro)
+where exists(select distinct(v.codigo_livro)
+	     from vendas v
+	     where l.codigo_livro=v.codigo_livro);
+
+c)
+
+update vendas_backup
+set total_venda=quantidade*preco_unitario;
+
+d)
+
+create table vendas_backup as select * from vendas;
+
+e)
+
+delete vendas_backup
+where to_char(data_venda,'fmMONTH')='JANEIRO';
+
+f)
+
+delete vendas_backup
+where codigo_livro=(select l.codigo_livro
+		    from livros l,autores a
+		    where l.codigo_autor=a.codigo_autor
+		    and a.nome='Sérgio Sousa'
+		    and preco_tabela=(select max(preco_tabela)
+				      from livros l
+				      where l.codigo_autor=a.codigo_autor));

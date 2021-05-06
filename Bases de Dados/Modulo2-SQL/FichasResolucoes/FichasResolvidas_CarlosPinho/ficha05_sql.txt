@@ -1,0 +1,87 @@
+1.a)
+
+select titulo,preco_tabela
+from livros
+where genero='Informática'
+and preco_tabela=(select max(preco_tabela)
+		  from livros
+		  where genero='Informática');
+
+1.b)
+
+select titulo,preco_tabela
+from livros
+where genero='Informática'
+and preco_tabela>=all(select preco_tabela
+		      from livros
+		      where genero='Informática');
+
+1.c)
+
+select titulo,preco_tabela
+from livros l1
+where genero='Informática'
+and not exists(select *
+	       from livros l2
+	       where l2.preco_tabela>l1.preco_tabela
+	       and genero='Informática');
+
+1.d)
+
+select titulo,preco_tabela
+from livros l,(select max(preco_tabela)preco
+	     from livros
+	     where genero='Informática')pmaxinfo
+where genero='Informática'
+and preco_tabela=pmaxinfo.preco;
+
+2.
+
+select distinct a.nome
+from livros l,autores a
+where l.codigo_autor=a.codigo_autor
+and l.paginas>(select avg(l.paginas)
+	       from livros)
+order by a.nome;
+
+3.
+
+select a.nome
+from livros l,autores a
+where l.codigo_autor=a.codigo_autor
+group by a.nome
+having count(l.codigo_livro)>(select avg(count(*))
+			      from livros
+			      group by codigo_autor)
+order by a.nome;
+
+4.
+
+select l.titulo,l.preco_tabela "Preco",pma.media "Media",l.preco_tabela-pma.media "Diferenca"
+from livros l,
+(select codigo_autor,round(avg(preco_tabela),2)media
+ from livros
+ group by codigo_autor)pma
+where l.codigo_autor=pma.codigo_autor and genero='Informática';
+
+5.
+
+select l.genero,l.titulo,l.unidades_vendidas
+from livros l,
+(select genero,max(unidades_vendidas)max
+ from livros
+ group by genero)tab
+where l.genero=tab.genero and l.unidades_vendidas=tab.max
+order by 3 desc;
+
+6.
+
+select l.titulo,round((l.unidades_vendidas/fca.total*100),2) "Percent"
+from livros l,editoras e,
+(select sum(unidades_vendidas)total
+ from livros l,editoras e
+ where l.codigo_editora=e.codigo_editora
+ and e.nome like 'FCA%')fca
+where l.codigo_editora=e.codigo_editora and e.nome like 'FCA%'
+order by 2 desc;
+

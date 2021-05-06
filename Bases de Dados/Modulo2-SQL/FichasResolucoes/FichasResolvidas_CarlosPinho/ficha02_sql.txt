@@ -1,0 +1,119 @@
+1.
+
+select l.titulo
+from livros l,autores a
+where l.codigo_autor=a.codigo_autor and l.genero='Policial' and a.nome='Cláudio Tereso';
+
+2.
+
+select l.titulo
+from livros l,autores a
+where l.codigo_autor=a.codigo_autor and l.genero='Policial' and a.morada like '%Coimbra&';
+
+3.
+
+select distinct a.nome
+from livros l,autores a
+where l.codigo_autor=a.codigo_autor and l.genero=a.genero_preferido;
+
+4.
+
+select l.titulo,l.preco_tabela
+from livros l,vendas v,clientes c
+where l.codigo_livro=v.codigo_livro and v.codigo_cliente=c.codigo_cliente and c.morada like '%Coimbra%';
+
+5.
+
+select a.nome
+from livros l,autores a,vendas v,clientes c
+where l.codigo_autor=a.codigo_autor and l.codigo_livro=v.codigo_livro and v.codigo_cliente=c.codigo_cliente and a.n_contribuinte=c.n_contribuinte;
+
+6.
+
+select a.nome,l.titulo,l.genero
+from livros l,autores a
+where l.codigo_autor=a.codigo_autor and l.genero <> a.genero_preferido
+order by a.nome asc;
+
+7.
+
+select titulo,unidades_vendidas*preco_tabela*0.3 "Rendeu"
+from livros;
+
+8.
+
+select titulo,unidades_vendidas*preco_tabela*0.3 "Rendimento"
+from livros
+where unidades_vendidas*preco_tabela*0.3>10000
+order by genero asc,preco_tabela asc;
+
+9.
+
+select titulo,round(preco_tabela/paginas,2) "Custo pagina",ceil(preco_tabela/paginas) "Custo pag.(sup)",floor(preco_tabela/paginas) "Custo pag.(inf)"
+from livros
+where paginas between 400 and 700
+order by preco_tabela/paginas;
+
+10.
+
+select upper(titulo) "Titulo em maiusculas",lower(titulo) "Titulo em minusculas",initcap(titulo) "Titulo 1ra letra maiuscula"
+from livros;
+
+11.
+
+select titulo
+from livros
+where genero=initcap('informática');
+
+12.
+
+select nome "Nome completo",substr(nome,1,instr(nome,'',1)) "Primeiro nome",substr(nome,instr(nome,'',-1)+1) "Ultimo nome"
+from autores;
+
+13.
+
+select upper(l.titulo) "TITULO",lower(l.genero) "genero",concat(substr(upper(a.nome),1,1),substr(lower(a.nome),2)) "Nome Autor"
+from livros l,autores a,editoras e
+where l.codigo_autor=a.codigo_autor and l.codigo_editora=e.codigo_editora and e.nome='FCA - EDITORA'
+order by a.nome asc;
+
+14.
+
+select titulo
+from livros
+where length(titulo)>20;
+
+15.
+
+select titulo,preco_tabela,round((preco_tabela+preco_tabela*0.1355),1) "Preco com aumento"
+from livros
+where genero='Policial';
+
+a.
+
+select titulo,genero
+from livros
+where genero!='Policial' and genero!='Romance' and titulo not like 'O%';
+
+b.
+
+select titulo,preco_tabela "Preco em euros",round((preco_tabela*200.482),2) "Preco em escudos"
+from livros
+order by 2;
+
+d.
+
+select distinct l.titulo "TITULO",c.nome "Nome do cliente",a.nome "Nome do autor"
+from livros l,autores a,vendas v,clientes c,editoras e
+where l.codigo_autor=a.codigo_autor and l.codigo_editora=e.codigo_editora and l.codigo_venda=v.codigo_venda and v.codigo_cliente=c.codigo_cliente and e.nome='FCA - EDITORA' and substr(c.morada,instr(c.morada,'',-1)+1)=substr(a.morada,instr(a.morada,'',-1)+1);
+
+e.
+
+select l.titulo
+from livros l,autores a
+where l.codigo_autores=a.codigo_autores and substr(a.nome,instr(a.nome,'',-1)+1)='Loureiro';
+
+f.
+
+select titulo,genero,preco_tabela,round((preco_tabela+preco_tabela*0.1355),0) "Preco com aumento"
+from livros;

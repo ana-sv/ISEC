@@ -1,0 +1,98 @@
+1.
+
+select count(*) "Total de livros de Informatica"
+from livros
+where genero='Informática;
+
+2.
+
+select count(*) "Total livros",round(avg(preco_tabela),1) "Preco medio",sum(unidades_vendidas) "Total livros vendidos"
+from livros;
+
+3.
+
+select genero "Genero",count(*) "Quantidade"
+from livros
+group by genero
+order by genero asc;
+
+4.
+
+select l.titulo,min(v.preco_unitario) "Preco mais baixo",max(v.preco_unitario) "Preco mais alto",round(avg(v.preco_unitario),2) "Preco medio"
+from livros l,vendas v
+where l.codigo_livro=v.codigo_livro;
+
+5.
+
+select genero,max(preco_tabela)-min(preco_tabela) "Diferenca"
+from livros
+group by genero;
+
+6.
+
+select l.titulo "TITULO",l.preco_tabela "PRECO",sum(v.quantidade) "NUM_VENDIDOS",sum(v.quantidade)*l.preco_tabela "REC_ESPERADA",sum(v.preco_unitario*v.quantidade) "REC_EFECTIVA"
+from livros l,vendas v
+where l.codigo_livro=v.codigo_livro
+group by l.titulo,l.preco_tabela;
+
+7.
+
+select genero "GENERO",round(avg(preco_tabela),0)
+from livros
+group by genero
+having count(titulo)>4
+order by 2 asc;;
+
+8.
+
+select a.nome "NOME",min(l.preco_tabela) "Preco minimo"
+from livros l,autores a
+where l.codigo_autor=a.codigo_autor
+group by a.nome
+having min(l.preco_tabela)>30
+order by 2;
+
+9.
+
+select c.codigo_cliente,c.nome,sum(v.quantidade) "Nro livros",round(avg(v.preco_unitario),2) "Preco medio",count(distinct l.codigo_autor) "Nro autores diferentes"
+from livros l,vendas v,clientes c
+where l.codigo_livro=v.codigo_livro and v.codigo_cliente=c.codigo_cliente and c.morada like '%Lisboa%'
+group by c.codigo_cliente,c.nome
+having sum(v.quantidade)>3 and count(distinct l.codigo_editora)<=1;
+
+10.
+
+select a.nome, decode(count(l.titulo),0,'nenhum',count(l.titulo)) "Num. Livros"
+from autores a
+left outer join livros l
+on l.codigo_autor=a.codigo_autor
+group by a.nome
+order by a.nome;
+
+a.
+
+select count(codigo_livro) "Total de livros"
+from livros;
+
+b.
+
+select min(l.preco_tabela) "Mais baixo",max(l.preco_tabela) "Mais alto",avg(l.preco_tabela) "Medio"
+from livros l,editoras e
+where l.codigo_editora=e.codigo_editora and e.nome like '%FCA%';
+
+c.
+
+select l.genero "Genero",count(*) "Quantidade"
+from livros l,autores a
+where l.codigo_autor=a.codigo_autor and a.nome like '%a%' or a.morada like '%Coimbra%'
+group by genero
+order by genero asc;
+
+d.
+
+select e.nome "NOME",l.genero "GENERO",max(l.unidades_vendidas) "MAXIMO",min(l.unidades_vendidas) "MIN",avg(l.unidades_vendidas) "MEDIO",count(l.codigo_livro) "Nro"
+from editoras e,livros l,autores a
+where e.codigo_editora=l.codigo_editora and l.codigo_autor=a.codigo_autor and a.nome not like 'Paulo Loureiro'
+group by e.nome,l.genero
+having sum(unidades_vendidas)<=10000
+order by 1,2,3;

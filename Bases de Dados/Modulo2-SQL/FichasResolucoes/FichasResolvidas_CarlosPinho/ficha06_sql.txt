@@ -1,0 +1,50 @@
+1.
+
+select tlivros "Livros",tautores "Autores",teditoras "Editoras"
+from
+(select count(codigo_livro)tlivros
+ from livros)li,
+(select count(codigo_autor)tautores
+ from autores)au,
+(select count(codigo_editora)teditoras
+ from editoras)ed;
+
+2.
+
+select 'O autor '||nome||' escreveu '||tlivros||' livro(s) e '||tfca||' sob a alçada da editora FCA-EDITORA' as "Resultado"
+from
+(select a.nome,count(l.codigo_livro)tlivros
+ from autores a,livros l
+ where a.codigo_autor=l.codigo_autor
+ group by a.nome
+ order by a.nome)autor_li,
+(select a.nome "id",count(l.codigo_livro)tfca
+ from livros l,autores a,editoras e
+ where l.codigo_autor=a.codigo_autor
+ and l.codigo_editora=e.codigo_editora
+ and e.nome='FCA - EDITORA'
+ group by a.nome)livro_ed
+where autor_li.nome=livro_ed."id";
+
+3.
+
+select a.nome "NOME",l.titulo "TITULO",tot_fca "LIVROS FCA",totlivros "Total de Livros" 
+from livros l,editoras e,autores a,
+(select a.nome "nome 2",count(codigo_livro)tot_fca
+ from livros l, editoras e, autores a
+ where l.codigo_editora=e.codigo_editora
+ and l.codigo_autor=a.codigo_autor
+ and e.nome='FCA - EDITORA'
+ group by a.nome)liv_edi,
+(select nome "nome 3",count(codigo_livro)totlivros
+ from autores a,livros l
+ where l.codigo_autor=a.codigo_autor
+ group by nome
+ order by nome)aut_liv
+where e.codigo_editora=l.codigo_editora
+and l.codigo_autor=a.codigo_autor
+and l.preco_tabela=(select  max(preco_tabela)
+                    from livros l,editoras e
+                    where e.nome='FCA - EDITORA')
+and a.nome=liv_edi."nome 2"
+and a.nome=aut_liv."nome 3"

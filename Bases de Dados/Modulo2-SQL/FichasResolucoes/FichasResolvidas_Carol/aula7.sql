@@ -1,0 +1,53 @@
+------ AULA 7 2016/2017
+
+ 
+SELECT TITULO, PRECO_TABELA
+FROM LIVROS
+WHERE PRECO_TABELA = 
+                  (SELECT MAX(PRECO_TABELA)
+                  FROM LIVROS
+                  WHERE GENERO='Informática');
+                  
+                  
+SELECT TITULO, PRECO_TABELA
+FROM LIVROS
+WHERE GENERO='Informática'
+AND PRECO_TABELA >= ALL 
+                      (SELECT PRECO_TABELA
+                      FROM LIVROS
+                      WHERE GENERO='Informática');
+
+                  
+SELECT TITULO, PRECO_TABELA
+FROM LIVROS L
+WHERE GENERO='Informática'
+AND NOT EXISTS 
+                (SELECT *
+                FROM LIVROS
+                WHERE GENERO='Informática'
+                AND L.PRECO_TABELA < LIVROS.PRECO_TABELA);
+
+
+SELECT TITULO, PRECO_TABELA
+FROM (SELECT TITULO, PRECO_TABELA
+      FROM LIVROS
+      WHERE GENERO='Informática'
+      AND ); 
+      
+      
+SELECT DISTINCT NOME
+FROM AUTORES, LIVROS, (SELECT AVG(PAGINAS) AVGPAG
+                      FROM LIVROS
+                      GROUP BY CODIGO_LIVRO)
+WHERE LIVROS.CODIGO_AUTOR = AUTORES.CODIGO_AUTOR
+AND LIVROS.PAGINAS > AVGPAG;
+
+      
+SELECT DISTINCT NOME
+FROM AUTORES, LIVROS, VENDAS, (SELECT AVG(QUANTIDADE) AVGLIVROS
+                              FROM VENDAS, LIVROS, AUTORES
+                              WHERE VENDAS.CODIGO_LIVRO = LIVROS.CODIGO_LIVRO
+                              AND LIVROS.CODIGO_AUTOR = AUTORES.CODIGO_AUTOR
+                              GROUP BY AUTORES.NOME)
+WHERE LIVROS.CODIGO_AUTOR=AUTORES.CODIGO_AUTOR
+AND LIVROS.CODIGO_LIVRO > AVGLIVROS; 

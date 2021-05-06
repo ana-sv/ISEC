@@ -1,0 +1,100 @@
+1.
+
+select *
+from autores;
+
+2.
+
+select titulo
+from livros;
+
+3.
+
+select distinct genero
+from livros;
+
+4.
+
+select titulo
+from livros
+where preco_tabela between 25 and 35;
+
+5.
+
+select codigo_livro,titulo
+from livros
+where genero='Informática';
+
+6.
+
+select titulo
+from livros
+where genero='Policial' and paginas>500;
+
+7.
+
+select distinct genero
+from livros
+where paginas>700 or preco_tabela>45;
+
+8.
+
+select titulo,preco_tabela
+from livros
+where genero='Informática'
+order by preco_tabela desc;
+
+9.
+
+select isbn,titulo,preco_tabela,quant_em_stock
+from livros
+where genero='Informática'
+order by preco_tabela desc and quant_em_stock asc;
+
+10.
+
+select distinct codigo_autor
+from livros
+where quant_em_stock>0;
+
+11.
+
+select titulo
+from livros
+where genero!='Policial';
+
+12.
+
+select titulo
+from livros
+where genero not in 'Policial';
+
+13.
+
+select nome
+from autores
+where idade>30 and genero_preferido='Policial'
+order by nome asc;
+
+14.
+
+select nome
+from autores
+where nome like '%r%' and nome like '%d%';
+
+15.
+
+select titulo
+from livros
+where titulo like 'O%st%' and titulo like 'M%to%';
+
+16.
+
+select titulo
+from livros
+where genero='Policial' or genero='Romance' or genero='Aventura';
+
+17.
+
+select 'O livro '||titulo||' custa '||preco_tabela||' euros.' as "Listagem de Livros"
+from livros;

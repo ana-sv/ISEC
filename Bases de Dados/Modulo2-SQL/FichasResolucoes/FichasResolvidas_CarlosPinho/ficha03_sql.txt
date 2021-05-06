@@ -1,0 +1,96 @@
+1.
+
+select titulo
+from livros
+where to_char(data_edicao,'yyyy')='2011';
+
+2.
+
+select to_char(systimestamp,'hh:mm:ss') "Hora Actual",to_char(systimestamp,'dd,Month,YYYY') "Data Actual"
+from dual;
+
+3.
+
+select titulo,preco_tabela
+from livros,dual
+where data_edicao>sysdate-80;
+
+4.
+
+select l.titulo
+from livros l,vendas v,clientes c,dual
+where l.codigo_livro=v.codigo_livro and v.codigo_cliente=c.codigo_cliente and c.morada like '%Lisboa%' and to_char(l.data_venda,'mm-yyyy') in ('08-2013','09-2013');
+
+5.
+
+select l.titulo "Titulo",v.data_venda "Data compra",l.data_edicao "Data edicao"
+from livros l,vendas v
+where l.codigo_livro=v.codigo_livro and l.genero=initcap('informática') and to_char(v.data_venda,'mm-yyyy')=to_char(l.data_edicao,'mm-yyyy');
+
+6.
+
+select a.nome "NOME",l.data_edicao "Editado em"
+from livros l,autores a
+where l.codigo_autor=a.codigo_autor and l.paginas>190 and l.genero='Informática' and l.data_edicao between to_date('21-06-2013','dd-mm-yyyy') and to_date('22-09-2013','dd-mm-yyyy');
+
+7.
+
+select titulo,floor((sysdate-data_edicao)/365) "Nro anos"
+from livros
+where genero='Informática';
+
+8.
+
+select c.nome
+from clientes c,vendas v,livros l
+where c.codigo_cliente=v.codigo_cliente and l.codigo_livro=v.codigo_livro and l.genero='Informática' and to_char(v.data_venda,'hh24')<('17') and to_char(v.data_venda,'dd-mm-yyyy')=to_char(next_day(trunc(v.data_venda,'Month')-1,'Segunda'),'dd-mm-yyyy');
+
+9.
+
+select nome
+from autores
+minus
+select a.nome
+from autores a,livros l
+where l.codigo_autor=a.codigo_autor;
+
+10.
+
+select nome
+from autores
+minus
+select a.nome
+from autores a,livros l,dual
+where l.codigo_autor=a.codigo_autor or to_char(l.data_edicao,'yyyy')=to_char(sysdate,'yyyy);
+
+a.
+
+select to_char(to_date('01-01-2000','mm-dd-yyyy'),'Day') "Dia da semana"
+from dual;
+
+b.
+
+select titulo "Titulo",to_char(data_edicao,'Month') "Mes de Edicao",to_char(data_edicao,'yyyy') "Ano de Edicao"
+from livros
+order by 2;
+
+c.
+
+select l.titulo "Titulo",a.idade-floor((sysdate-l.data_edicao)/365) "Idade do autor"
+from livros l,autores a
+where l.codigo_autor=a.codigo_autor;
+
+d.
+
+select l.titulo "Titulo",c.nome "Nome do cliente",to_char(v.data_venda,'Day') "Dia semana",to_char(v.data_venda,'hh:mm') "Hora compra"
+from livros l,vendas v, clientes c
+where l.codigo_livro=v.codigo_livro and v.codigo_cliente=c.codigo_cliente;
+
+e.
+
+select nome "Nome do autor"
+from autores
+minus
+select a.nome
+from autores a,livros l,dual
+where l.codigo_autor=a.codigo_autor or to_char(l.data_edicao,'yyyy')!=to_char(sysdate,'yyyy);

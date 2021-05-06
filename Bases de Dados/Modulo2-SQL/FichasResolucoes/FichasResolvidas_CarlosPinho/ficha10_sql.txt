@@ -1,0 +1,160 @@
+1.
+
+1.b)
+
+create table clientes_backup as
+select * from clientes;
+
+1.c)
+
+select * from clientes_backup;
+
+1.d)
+
+insert into clientes_backup values
+(11,'João Moreira',1020304,'Rua Palheiros das Ondas - 1030 775 Santarém','243123456');
+
+1.e)
+
+select * from clientes_backup;
+
+-- Na listagem da S1 o novo cliente aparece, mas na S2 não aparece
+-- Isto deve-se ao facto da S1 ter lock de escrita e de ainda não ter sido efectuado o commit; a S2 só mostra o que está registado na tabela.
+
+1.f)
+
+update clientes_backup
+set n_contribuinte=999999999
+where codigo_cliente=11;
+
+1.g)
+
+select * from clientes_backup;
+
+-- Na listagem do S1 o nro de contribuinte não está actualizado devido a S2 ter lock de escrita a ainda não ter sido efectuado o commit
+-- Na listagem do S2 o contribuinte aparece alterado, pois é a ela que o lock pertence
+
+1.h)
+
+commit;
+
+select * from clientes_backup;
+
+-- Em ambas as listagens aparece o cliente 11, visto a S1 ter efectuado o commit
+
+1.i)
+
+rollback;
+
+select * from clientes_backup;
+
+-- Como foi feito rollback na S2, a alteraçãoo do nro de contribuinte do cliente 1 não foi efectivada na base de dados; desta as listagens de ambas as sessões aparecem com o mesmo nro, sem a alteração
+
+2.
+
+2.a)
+
+update clientes backup
+set telefone=239555555
+where codigo_cliente=8;
+
+2.b)
+
+update clientes_backup
+set nome='Manuel Moreira'
+where codigo_cliente=11;
+
+select * from clientes_backup;
+
+-- Nas listagens apenas aparecem as alterações efectuadas por cada uma das sessões. Nenhuma vê as alterações da outra, pois ainda nenhuma fez commit
+
+2.c)
+
+update clientes_backup
+set morada='Rua Ferreira Borges - 3000 179 Coimbra'
+where codigo_cliente=8;
+
+-- Como a S1 tem o lock para escrita ao registo do cliente 8 e ainda não efectuou o commit, o pedido de lock da S2 ao mesmo registo está à espera
+-- Enquanto a S1 não libertar o lock, a S2 não consegue fazer nada no registo, tendo ficado bloqueada
+
+2.d)
+
+commit;
+
+select * from clientes_backup;
+
+-- O telefone aparece nas duas listagens, visto que foi efectuado commit na S1, tendo sido gravado o nro de telefone
+-- O nome e a morada só aparecem alterados na S2, devido a ainda não ter sido efectuado o commit
+
+2.e)
+
+create table funcionario
+(n_contribuinte number(9,0) constraint funcionario_pk primary key,
+ nome varchar2(30),
+ telefone number(12,0));
+
+select * from clientes_backup;
+
+-- A alteração da morada do cliente 8 já aparece na S1 pois o comando create TABLE é uma transacção
+
+3.
+
+3.a)
+
+insert into funcionario values
+(987654321,'Joaquim Almeida',239534123);
+
+3.b)
+
+drop table funcionario;
+
+-- A S1 não conseguiu eliminar a tabela, pois ela está bloqueada pela S2 e enquanto a S2 não libertar o lock de escrita, a S1 não pode eliminar a tabela
+
+3.c)
+
+insert into funcionario values
+(987654321,'Joaquim Almeida',239534123);
+
+-- A S1 está à espera pois a S2 tem o registo bloqueado
+
+3.d)
+
+commit;
+
+-- A S1 já conseguiu executar o comando após libertação do registo por parte da S2, embora tenha dado erro, devido a duplicação da chave primária
+
+3.e)
+
+drop table funcionario;
+
+select * from funcionario;
+
+-- Dá erro, pois a tabela foi eliminada pela S2
+
+4.
+
+4.a)
+
+update clientes_backup
+set telefone=239111111
+where codigo_cliente=1;
+
+4.b)
+
+update clientes_backup
+set telefone=239222222
+where codigo_cliente=2;
+
+4.c)
+
+update clientes_backup
+set telefone=717171717
+where codigo_cliente=1;
+
+4.d)
+
+update clientes_backup
+set telefone=959595959
+where codigo_cliente=2;
+
+-- Ambas as sessões estão a tentar aceder aos mesmos resgistos. Uma está à espera que a outra termine a transacção; como nenhuma o vai fazer, ocorreu um deadlock
