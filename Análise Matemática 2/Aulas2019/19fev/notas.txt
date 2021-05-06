@@ -1,0 +1,21 @@
+Aula 19fev - Introdução ao Matlab
+
+Problema do "Gauso"
+somar os numeros de uma 
+
+Formulas Matemáticas de uma Progressao aritmerica;:
+(1) Razão: 
+        r = a1 - a1-n
+(2) Equação de Iteração:
+
+(3) Soma de elementos de uma PA:
+
+
+-> Algoritmo01 GerarParitetica_v01
+input: a-1, r, n 
+output: a
+
+nota:
+melhor versao -> tem menor tempo de execução
+
+
