@@ -1,0 +1,59 @@
+khanacademy: https://www.khanacademy.org/math/linear-algebra/vectors_and_spaces
+bem explicado:
+
+transformações : 1º https://www.youtube.com/watch?v=x1TjLpHNZHE&list=PLTtZUJqLYbCmGfl498ASK1x7OmomkEB4x&index=30
+
+
+https://www.youtube.com/playlist?list=PL800B5EA51EE16BFC
+https://www.youtube.com/watch?v=4GZ_ulllAec p.vec
+
+sub espaço vectorial : parte 0: https://www.youtube.com/watch?v=e-lY-MSfeS4
+		     : parte 1: https://www.youtube.com/watch?v=83nCgbvGsc4
+		     : parte 2: https://www.youtube.com/watch?v=T3gVko9sYfc
+
+
+base de um espaço vectorial: https://www.youtube.com/watch?v=vnqzQbv-g2Q&index=13&list=PL017DD5B497DF1A16
+
+
+
+
+
+
+
++/- explicado
+
+pequena intrudoção de vectores - https://www.youtube.com/watch?v=x3GJz4ZX0Rw&index=11&list=PLf1lowbdbFIAFr80SlJP7jsJcssvqRV5b
+
+Adiçã de vectores - https://www.youtube.com/watch?v=BnX8YgJSlDI
+produto interno/escalar - https://www.youtube.com/watch?v=gtR5eUxemUo
+produo vectorial - https://www.youtube.com/watch?v=pVZucIu-icY
+
+equações da recta no plano - ainda nada
+
+----- // ----- // ------
+
+
+Transformações lineares - https://www.youtube.com/watch?v=-osI50WNuwM&index=8&list=PLqXKflQxueo0Siycb_34mrz3wfrh2jPyo
+			- https://www.youtube.com/watch?v=G6tQt1aYtTs&index=12&list=PLf1lowbdbFIAFr80SlJP7jsJcssvqRV5b
+			- https://www.youtube.com/watch?v=TtaZzs4ONfk
+
+Espaços vectoriais - https://www.youtube.com/watch?v=qLKf3HpZQ7g
+		   - https://www.youtube.com/watch?v=J6PSVelR_q8
+
+
+Subespaços vectoriais - https://www.youtube.com/watch?v=9Prq_qqoc5o
+
+combinações lineares - https://www.youtube.com/watch?v=xquo2y7D4R0
+
+Bases - https://www.youtube.com/watch?v=LX4x_kmQ9m4
+Mudança de bases - https://www.youtube.com/watch?v=1E7wISjvmBY
+		 - https://www.youtube.com/watch?v=02f8mYY5Xh0
+
+---- // ----- // ----
+
+Valores próprio e vetores próprios - https://www.youtube.com/watch?v=3BI_KOOlSD8
+
+Cayley, Hamilton -  https://www.youtube.com/watch?v=6ImynCk2zhs
+
+introdução à diagonalização de matrizes - https://www.youtube.com/watch?v=kGdezES-bDU
+t					- (search) https://www.youtube.com/results?search_query=linear+algebra+diagonalization+
