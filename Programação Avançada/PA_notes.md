@@ -154,43 +154,10 @@ https://www.geeksforgeeks.org/java-math-random-method-examples/
 
 
 
-# Final Keyword 
-
-* uma variável declarada com a final keyword não pode ser modificada; deve ser inicializada.
-* é boa prática serem representadas em maiúsculas
 
 
-```
-Final Variable --> To create constant variables
-Final Methods --> Prevent Method Overriding
-Final Classes --> Prevent Inheritance
-```
 
-
-```java
-// Java program to demonstrate  
-// reference final variable 
-
-class Gfg 
-{ 
-    public static void main(String[] args)  
-    { 
-        // a final reference variable sb 
-        final StringBuilder sb = new StringBuilder("Geeks"); 
-          
-        System.out.println(sb); 
-          
-        // changing internal state of object 
-        // reference by final reference variable sb 
-        sb.append("ForGeeks"); 
-          
-        System.out.println(sb); 
-    }     
-} 
-```
-
-
-# Operadores Relacionais  & equals()
+# Operadores Relacionais & equals()
 
 ```java
 public class Equivalencia{
@@ -230,14 +197,66 @@ int i=1;
 float f;
 ```
 
+## Converções explicitas do tipo cast
 ```java
-// conversão explificita do tipo cast
 int i;
 float f=2;
 // i = f; //ERRO
 i = (int) f;
 f = i;
 ```
+
+```java
+byte a=1, b=2, c;
+//c = a+b; //ERRO
+c = (byte)(a + b);
+```
+
+#Upcasting 
+Conversão de tipo de uma classe derivadas para uma classe base, converte um tipo mais restrito num tipo mais alargado.
+
+```java
+public class Exemplo {
+
+	static void verifica( VeiculoRodoviario x){
+	x.aviso();
+	// x.maisUmPassageiro(); //ERRO: não conhece este método
+	}
+
+	public static void main( String[]args){
+		VeiculoDePassageiros autocarro = new VeiculoDePassageiros(140, 130, 40, 39);
+		autocarro.aviso();
+		autocarro.maisUmPassageiro();
+		autocarro.maisUmPassageiro();
+		verifica(autocarro);
+	}
+}
+```
+
+# Polimorfismo 
+Redefinição de métodos e afins, como C++
+
+# Classes Abstratas
+- Possuem metodos abstractos que são apenas "protótipos" de métodos comuns a outras classes derivadas. 
+- Uma classe que tenha pelo menos um método abstracto é uma classe abstracta e tem que ser declarada como tal.
+- É possivel definir uma classe como abstracta , mesmo que não tenha nenhum método abstracto , usando ```abstracr ```
+- Não é possivel criar objectos de classes abstractas 
+- Pode haver referências para classes abstractas ( referindo objectos de classes derivadas não abstractas)
+
+- Numa classe derivada de uma classe abstracta -> a classe derivada não será abastracta e tem que ter todos os métodos definidos 
+
+# Interfaces
+- Um interface pode especificar as funcionalidades que as classes que o implementam devem proporcionar 
+- Para definir que uma classe implementa um ou vários interfaces 
+```java 
+class Cliente implements Chamada {...}
+```
+- Quando uma classe implemneta um interface, os métodos do inerface que são definidos na classe devem ser declarados ```public ```
+- Várias classes podem implementar um interface 
+
+
+
+
 
 
 
