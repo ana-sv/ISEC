@@ -1,5 +1,4 @@
-# Apontamentos Programação Avançada 
-## 2020-2021
+# Apontamentos Programação Avançada  ### 2020-2021
 # Compilar  & executar pela linha de comandos 
 
 #falta
@@ -188,6 +187,24 @@ class Gfg
         System.out.println(sb); 
     }     
 } 
+```
+
+
+# Operadores Relacionais 
+
+```
+public class Equivalencia{
+	public static void main( String [] args ){
+		Integer n1 = new Integer( 47);
+		Integer n2 = new Integer( 47);
+		System.out.println( n1 == n2 );
+		System.out.println( n1 != n2 );
+	}
+}
+
+//Imprime
+// true
+// false
 ```
 
 
