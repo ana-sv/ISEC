@@ -1,4 +1,4 @@
-# Apontamentos Programação Avançada  ### 2020-2021
+# [2020-2021] Apontamentos Programação Avançada  
 # Compilar  & executar pela linha de comandos 
 
 #falta
@@ -190,9 +190,9 @@ class Gfg
 ```
 
 
-# Operadores Relacionais 
+# Operadores Relacionais  & equals()
 
-```
+```java
 public class Equivalencia{
 	public static void main( String [] args ){
 		Integer n1 = new Integer( 47);
@@ -205,6 +205,38 @@ public class Equivalencia{
 //Imprime
 // true
 // false
+```
+
+
+```java
+public class MetodoEqualsUm{
+	public static void main( String [] args ){
+		Integer n1 = new Integer( 47);
+		Integer n2 = new Integer( 47);
+		System.out.println( n1.equals( n2));
+	}
+}
+
+// Imprime :
+// true
+```
+
+
+# Conversões & Operador Cast
+
+```java 
+// conversão implicita 
+int i=1;
+float f;
+```
+
+```java
+// conversão explificita do tipo cast
+int i;
+float f=2;
+// i = f; //ERRO
+i = (int) f;
+f = i;
 ```
 
 
