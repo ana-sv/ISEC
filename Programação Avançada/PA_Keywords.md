@@ -3,10 +3,13 @@
 
 # public
 
-
+faltaaaa
 
 
 # static 
+
+faltaaaa
+
 
 # instanceof 
 Operador que permite testar o tipo de objecto, devolve true/false
@@ -119,9 +122,9 @@ public class BlankFinal{
                 p=new Valor();
         }
         
-public static void main( String [] args){
-        BlankFinal bf=new BlankFinal();        
-}
+	public static void main( String [] args){
+    	    BlankFinal bf=new BlankFinal();        
+	}
 }
 
 ```
