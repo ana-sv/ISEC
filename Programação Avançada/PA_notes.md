@@ -256,22 +256,23 @@ class Cliente implements Chamada {...}
 
 
 
+# Classe Object 
+- Todas as classes dervivam direct ou indirectamente de Object 
+
+Alguns métodos da classe
+```java public String toString() ``` retorna uma string que descreve o objeto
+```java public boolean equals(Object obj) ``` testa a igualdade entre este objecto e o objecto referido por obj
+```java public int hashCode() ```retorn o valor do hash code deste objeto
+```java protected Object clone() ``` cria e retorna uma copia deste objeto
+```java public final Class <?> getClass() ``` retorna o objeto Class que representa o tipo deste objeto
+
+## hashCode & equals 
+- Se ```java x.equals(y)```` então ```java x.hashCode() == y.hashCode()```
+- hashCode() retorna um inteiro que resulta da conversão do endereço interno do objecto
+- quanso se redifine equals() deve redefinir-se hashCode() de maneira compativel
 
 
 
-
-
-
-# [2020-2021] [Keywords]
-
-# public
-
-faltaaaa
-
-
-# static 
-
-faltaaaa
 
 
 # instanceof 
