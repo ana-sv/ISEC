@@ -1,0 +1,132 @@
+﻿#logo {
+    position: relative;
+    width: 100%;
+
+ margin-top: 0.5em;
+ margin-bottom: 0.5em;
+ 
+
+  
+        }
+
+.menu {
+    position: relative;
+	background: #000000;
+	padding:0;
+	margin:0;
+	list-style-type:none;
+	height:30px;
+}
+.menu li { float: left; }
+.menu li a {
+	padding:9px 20px;
+	display:block;
+	color: #ffffff;
+	text-decoration:none;
+	font:12px arial, verdana, sans-serif;
+}
+
+.menu ul {
+	position:absolute;
+	left:-9999px;
+	top:-9999px;
+	list-style-type:none;
+    z-index: 1; 
+}
+.menu li:hover { position:relative; background: #333333 }
+.menu li:hover ul {
+	left:0px;
+	top:30px;
+	background:#333333 ;
+	padding:0px;
+}
+
+.menu li:hover ul li a {
+	padding:5px;
+	display:block;
+	width:168px;
+	text-indent:15px;
+	background-color:#000000;
+}
+.menu li:hover ul li a:hover { background: #333333 ; }
+
+
+
+
+
+#global {
+    font-family: Verdana;
+    color: #999;
+    padding-left: 1em;
+    padding-top: 1em;
+
+}
+
+
+#global #principios {
+            float: left;
+          padding-right: 10px; 
+            font-size: 18px;
+            font-weight: 200;
+           width: 50%;      
+            box-sizing: border-box;
+        }
+
+ #global br {
+            clear: both;
+        }
+
+ 
+ #global #formulario {
+        float: right;
+        width: 50%;
+        box-sizing: border-box;
+        padding:20px;
+        font-weight: 300;
+
+    }
+
+
+#formulario {
+    background-color: #c4dee0;
+ }
+
+
+
+ #formulario label {
+        font-size: 1.2em;
+        font-weight: 200;
+        padding-top: 12px;
+        display: block;
+    }
+
+
+ #formulario input {
+        width: 100%;
+        box-sizing:border-box;
+        font-size: 18px;
+        font-weight: 200;
+        padding: 10px;
+
+    }
+
+
+
+
+ #formulario input[type="submit"] {
+            border: none;
+            background-color: #808080;
+            color: white;
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 18px;
+        }
+
+
+
+@media (min-width: 600px){
+    .conteudo {
+        margin: auto;
+        max-width: 800px;
+    }
+

@@ -1,0 +1,724 @@
+﻿
+#logo {
+    position: relative;
+    width: 100%;
+
+ margin-top: 0.5em;
+ margin-bottom: 0.5em;
+        }
+
+.menu {
+    position: relative;
+	background: #000000        /* #efedf1 */;
+	padding:0;
+	margin:0;
+	list-style-type:none;
+	height:30px;
+}
+.menu li { float: left; }
+.menu li a {
+	padding:9px 20px;
+	display:block;
+	color: #ffffff;
+	text-decoration:none;
+	font:12px arial, verdana, sans-serif;
+    font-style:italic;
+
+}
+
+/* Submenus */
+.menu ul {
+	position:absolute;
+	left:-9999px;
+	top:-9999px;
+	list-style-type:none;
+    z-index: 1; 
+}
+.menu li:hover { position:relative; background: #333333 }
+.menu li:hover ul {
+	left:0px;
+	top:30px;
+	background:#333333 ;
+	padding:0px;
+}
+
+.menu li:hover ul li a {
+	padding:5px;
+	display:block;
+	width:168px;
+	text-indent:15px;
+	background-color:#000000;
+}
+.menu li:hover ul li a:hover { background: #333333 ; }
+
+
+
+
+
+#slider{
+ position:relative;
+ float:left;
+ margin-top: 0.5em;
+ margin-bottom: 0.5em;
+ margin-left: auto;
+ margin-right: auto;
+ box-sizing: padding-box content-box;
+
+}
+
+
+
+@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+
+body { margin: 0; } 
+div#slider { overflow: hidden; }
+div#slider figure img { width: 20%; float: left;}
+div#slider figure { 
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 15s slidy infinite; 
+ 
+}
+
+article {
+  clear:both;
+  background: #000000;
+  color: #a4a4a4;
+  width: 100%;
+  padding-bottom: 1em; 
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  font-size:25px;
+  font-style: italic;
+
+ }
+
+ 
+
+}
+
+
+
+/******FORMULARIO*******/
+
+
+
+
+
+
+#global {
+    font-family: Verdana;
+    color: #999;
+    padding-left: 1em;
+    padding-top: 1em;
+
+}
+
+
+#global #principios {
+            float: right;
+            padding-right: 5px; 
+            font-size: 24px;
+            font-weight: 200;
+            width: 50%;      
+            box-sizing: border-box;
+            text-align:center;
+            margin-top:10%;
+
+        }
+
+ #global br {
+            clear: both;
+        }
+
+ 
+ #global #formulario {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 12px;
+    font-weight: 300;
+    }
+
+
+#formulario {
+      background-color: #eee;
+    font-size: 15px;
+    height:510px;
+ }
+
+
+
+ #formulario label {
+            font-size: 1em;
+    font-weight: 200;
+    padding-top: 15px;
+    display: block;
+    padding: 7px;
+    }
+
+
+ #formulario input, #formulario select {
+      width: 100%;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-weight: 100;
+    padding: 8px;
+    height: 8px;
+    }
+
+
+
+
+ #formulario input[type="submit"] {
+            border: none;
+            background-color: #808080;
+            color: white;
+            font-size: 18px;
+            padding: 0;
+             margin-top: 0;
+             height:26px;
+        }
+
+.conteudo {
+       
+    float:left;
+    width:100%;
+}
+#formulario input[type="radio"] {
+    width: 15px
+
+}
+
+@media (min-width: 600px){
+ /*   .conteudo {
+          
+        margin: auto;
+        max-width: 800px;*/
+    }
+
+
+
+    /*********************Quem somos*/
+    
+#fachada{
+    position: relative;
+    float:left;
+    clear: left;
+    margin-top: 2em;
+    margin-left: 4em;
+    }
+
+
+.texto {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+    text-align: justify;
+    margin-top: 4em;
+    margin-left: 40em;
+    margin-right: 4em;
+}
+
+
+/*********Coimbra**********/
+
+
+#accordion-slider{
+ margin: 4%;
+ padding: 0;
+ list-style: none;
+ position:relative; 
+}
+#accordion-slider li{
+ display: block;
+ overflow: hidden;
+ padding: 0;
+ width: 16%;
+ height:450px;
+}
+    
+
+
+.foto {
+    width: 700px;
+}
+
+
+@media (min-width: 1200px){
+    .foto {
+    width: 780px;
+     }
+}
+ 
+/***********Contactos**********/
+
+
+
+.contactos{
+    color:#272626;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    list-style:none;
+    position: absolute;
+    margin-top: 3em;
+    margin-left: 12em;
+    text-align: justify;      
+}
+
+
+
+.localizacao{
+    color:#272626;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    list-style:none;
+    position: absolute;
+    margin-top: 14em;
+    margin-left: 12em;
+    text-align: justify;
+}
+
+#mapa{
+    position: relative;
+    float: right;
+    margin-top: 2.5em;
+    margin-right: 12em;
+    margin-bottom: 2.5em;
+    
+    }
+
+
+/*************Login***********/
+
+
+#loginlogin {
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2),  
+                0 1px 1px rgba(0, 0, 0, .2),
+                0 3px 0 #fff,
+                0 4px 0 rgba(0, 0, 0, .2),
+                0 6px 0 #fff,  
+                0 7px 0 rgba(0, 0, 0, .2);
+}
+
+#loginlogin {
+    z-index: 0;
+    margin: 16px;
+    width: 500px;
+    left: calc(50% - 300px);
+    position: relative;
+    padding: 50px;
+}
+
+#loginlogin:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    border: 1px dashed #ccc;
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    box-shadow: 0 0 0 1px #fff;
+}
+
+#login
+{
+    background-color: #fff;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee));
+    background-image: -webkit-linear-gradient(top, #fff, #eee);
+    background-image: -moz-linear-gradient(top, #fff, #eee);
+    background-image: -ms-linear-gradient(top, #fff, #eee);
+    background-image: -o-linear-gradient(top, #fff, #eee);
+    background-image: linear-gradient(top, #fff, #eee);  
+    height: 240px;
+    width: 400px;
+    margin: -150px 0 0 -230px;
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;  
+    -webkit-box-shadow:
+          0 0 2px rgba(0, 0, 0, 0.2),
+          0 1px 1px rgba(0, 0, 0, .2),
+          0 3px 0 #fff,
+          0 4px 0 rgba(0, 0, 0, .2),
+          0 6px 0 #fff,  
+          0 7px 0 rgba(0, 0, 0, .2);
+    -moz-box-shadow:
+          0 0 2px rgba(0, 0, 0, 0.2),  
+          1px 1px   0 rgba(0,   0,   0,   .1),
+          3px 3px   0 rgba(255, 255, 255, 1),
+          4px 4px   0 rgba(0,   0,   0,   .1),
+          6px 6px   0 rgba(255, 255, 255, 1),  
+          7px 7px   0 rgba(0,   0,   0,   .1);
+    box-shadow:
+          0 0 2px rgba(0, 0, 0, 0.2),  
+          0 1px 1px rgba(0, 0, 0, .2),
+          0 3px 0 #fff,
+          0 4px 0 rgba(0, 0, 0, .2),
+          0 6px 0 #fff,  
+          0 7px 0 rgba(0, 0, 0, .2);
+}
+
+#login:before
+{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    border: 1px dashed #ccc;
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    -moz-box-shadow: 0 0 0 1px #fff;
+    -webkit-box-shadow: 0 0 0 1px #fff;
+    box-shadow: 0 0 0 1px #fff;
+}
+
+/*--------------------*/
+
+h1
+{
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .7), 0px 2px 0 rgba(0, 0, 0, .5);
+    text-transform: uppercase;
+    text-align: center;
+    color: #666;
+    margin: 0 0 30px 0;
+    letter-spacing: 4px;
+    font: normal 26px/1 Verdana, Helvetica;
+    position: relative;
+}
+
+h1:after, h1:before
+{
+    background-color: #777;
+    content: "";
+    height: 1px;
+    position: absolute;
+    top: 15px;
+    width: 120px;   
+}
+
+h1:after
+{ 
+    background-image: -webkit-gradient(linear, left top, right top, from(#777), to(#fff));
+    background-image: -webkit-linear-gradient(left, #777, #fff);
+    background-image: -moz-linear-gradient(left, #777, #fff);
+    background-image: -ms-linear-gradient(left, #777, #fff);
+    background-image: -o-linear-gradient(left, #777, #fff);
+    background-image: linear-gradient(left, #777, #fff);      
+    right: 0;
+}
+
+h1:before
+{
+    background-image: -webkit-gradient(linear, right top, left top, from(#777), to(#fff));
+    background-image: -webkit-linear-gradient(right, #777, #fff);
+    background-image: -moz-linear-gradient(right, #777, #fff);
+    background-image: -ms-linear-gradient(right, #777, #fff);
+    background-image: -o-linear-gradient(right, #777, #fff);
+    background-image: linear-gradient(right, #777, #fff);
+    left: 0;
+}
+
+/*--------------------*/
+
+fieldset
+{
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+/*--------------------*/
+
+#inputs input
+{
+    background: #f1f1f1 url(http://www.red-team-design.com/wp-content/uploads/2011/09/login-sprite.png) no-repeat;
+    padding: 15px 15px 15px 30px;
+    margin: 0 0 10px 0;
+    width: 353px; /* 353 + 2 + 45 = 400 */
+    border: 1px solid #ccc;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+    -webkit-box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+    box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+}
+
+#Utilizador
+{
+    background-position: 5px -2px !important;
+}
+
+#password
+{
+    background-position: 5px -52px !important;
+}
+
+#inputs input:focus
+{
+    background-color: #fff;
+    border-color: #e8c291;
+    outline: none;
+    -moz-box-shadow: 0 0 0 1px #e8c291 inset;
+    -webkit-box-shadow: 0 0 0 1px #e8c291 inset;
+    box-shadow: 0 0 0 1px #e8c291 inset;
+}
+
+/*--------------------*/
+#actions
+{
+    margin: 25px 0 0 0;
+}
+
+#submit
+{		
+    background-color: #ffb94b;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fddb6f), to(#ffb94b));
+    background-image: -webkit-linear-gradient(top, #fddb6f, #ffb94b);
+    background-image: -moz-linear-gradient(top, #fddb6f, #ffb94b);
+    background-image: -ms-linear-gradient(top, #fddb6f, #ffb94b);
+    background-image: -o-linear-gradient(top, #fddb6f, #ffb94b);
+    background-image: linear-gradient(top, #fddb6f, #ffb94b);
+    
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    
+    text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+    
+     -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+     -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+     box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;    
+    
+    border-width: 1px;
+    border-style: solid;
+    border-color: #d69e31 #e3a037 #d5982d #e3a037;
+
+    float: left;
+    height: 35px;
+    padding: 0;
+    width: 120px;
+    cursor: pointer;
+    font: bold 15px Arial, Helvetica;
+    color: #8f5a0a;
+}
+
+#submit:hover,#submit:focus
+{		
+    background-color: #ccc;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ffb94b), to(#fddb6f));
+    background-image: -webkit-linear-gradient(top, #ffb94b, #fddb6f);
+    background-image: -moz-linear-gradient(top, #ffb94b, #fddb6f);
+    background-image: -ms-linear-gradient(top, #ffb94b, #fddb6f);
+    background-image: -o-linear-gradient(top, #ffb94b, #fddb6f);
+    background-image: linear-gradient(top, #ffb94b, #fddb6f);
+}	
+
+#submit:active
+{		
+    outline: none;
+   
+     -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+     -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;		
+}
+
+#submit::-moz-focus-inner
+{
+  border: none;
+}
+
+#actions a
+{
+    color: #3151A2;    
+    float: left;
+    line-height: 35px;
+    margin-left: 10px;
+}
+
+/*--------------------*/
+
+
+/*quartos-camaratas***/
+
+#quarto {
+    max-width: 25%;
+    position:absolute;
+    margin-top: 6%; 
+    margin-left: 5%;
+    border: 3px solid black; 
+}
+
+#text-modalidade1{  
+    position:absolute;
+    margin-top: 3%; 
+    margin-left: 8%;
+      }
+
+
+
+#camarata4 {
+  max-width: 25%;
+  position:absolute;
+    margin-top: 6%; 
+    margin-left: 37%;
+   border: 3px solid black; 
+}
+
+#text-modalidade2{  
+    position:absolute;
+    margin-top: 3%; 
+    margin-left: 38%;
+    }
+
+
+#camarata6 {
+     max-width: 25%;
+  position:absolute;
+    margin-top: 6%; 
+    margin-left: 69%;
+    border: 3px solid black; 
+
+}
+
+
+#text-modalidade3{  
+    position:absolute;
+    margin-top: 3%; 
+    margin-left: 70%;
+    }
+
+
+/*servicos*/
+
+
+ul{
+    color:#333333;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 5%;
+
+}
+
+.servicos{
+    margin-left:2%;
+}
+
+li{
+    color: #727272;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   
+}
+
+#precario {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-collapse: collapse;
+
+}
+
+#precario td, #precario th {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 8px;
+    width:200px;
+}
+
+#precario tr:nth-child(even){background-color: #ddd}
+
+#precario tr:hover {background-color: #ddd;}
+
+#precario th {
+    background-color: #727272;
+    color: white;
+}
+
+
+h2 {
+    color: #333333;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h3{
+    text-align:center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:#333333;
+ 
+}
+
+
+
+h4 {
+    color: #808080;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ 
+   text-align: justify;
+}
+
+   h5{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:#696767;
+    text-align:center;
+    margin-top: 25%;
+}
+
+
+
+  .servicos-container{
+      position:absolute;
+      width:100%;
+
+  }
+.servicos-container > div, .gender > div, .smallinputs > div{
+    display:inline-block;
+    width:49%;
+    vertical-align:middle;
+}
+.servicos-container > div {
+    min-width:300px;
+}
+.gender > div {
+    width:70px;
+}
+
+.servicos-container > div.right > h4 {
+      width: 435px;
+    margin: 0;
+    padding: 0;
+}
+
+textarea#mensagem {
+width:100%;
+height:105px;
+
+}
+select#assunto {
+width:200px;
+
+}
+#conteudoprotegido{
+    position: absolute;
+    margin-top: 4%;
+    margin-left:20%;
+}
+.titulo{
+text-align:start;
+
+}

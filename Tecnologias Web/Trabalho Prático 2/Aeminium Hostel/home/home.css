@@ -1,0 +1,109 @@
+﻿#logo {
+    position: relative;
+    width: 100%;
+
+ margin-top: 0.5em;
+ margin-bottom: 0.5em;
+ 
+
+  
+        }
+
+.menu {
+    position: relative;
+	background: #000000        /* #efedf1 */;
+	padding:0;
+	margin:0;
+	list-style-type:none;
+	height:30px;
+}
+.menu li { float: left; }
+.menu li a {
+	padding:9px 20px;
+	display:block;
+	color: #ffffff;
+	text-decoration:none;
+	font:12px arial, verdana, sans-serif;
+}
+
+/* Submenus */
+.menu ul {
+	position:absolute;
+	left:-9999px;
+	top:-9999px;
+	list-style-type:none;
+    z-index: 1; 
+}
+.menu li:hover { position:relative; background: #333333 }
+.menu li:hover ul {
+	left:0px;
+	top:30px;
+	background:#333333 ;
+	padding:0px;
+}
+
+.menu li:hover ul li a {
+	padding:5px;
+	display:block;
+	width:168px;
+	text-indent:15px;
+	background-color:#000000;
+}
+.menu li:hover ul li a:hover { background: #333333 ; }
+
+
+
+
+
+#slider{
+ position:relative;
+ float:left;
+ margin-top: 0.5em;
+ margin-bottom: 0.5em;
+ margin-left: auto;
+ margin-right: auto;
+ box-sizing: padding-box content-box;
+
+}
+
+
+
+@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+
+body { margin: 0; } 
+div#slider { overflow: hidden; }
+div#slider figure img { width: 20%; float: left;}
+div#slider figure { 
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 15s slidy infinite; 
+ 
+}
+
+article {
+  clear:both;
+  background: #000000;
+  color: #a4a4a4;
+  width: 100%;
+  padding-bottom: 1em; 
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+ }
+
+ 
+
+}
