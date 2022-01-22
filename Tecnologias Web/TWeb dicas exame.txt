@@ -1,0 +1,5 @@
+-SAI SEMPRE tabelas e listas (desenhar ou fazer o codigo);
+-Sai sempre hierarquia de regras CSS (Exercicio onde vão aplicando regras e tem que dizer como fica);
+-Regras CSS: posiçoes;
+-Formulários;
+ 
